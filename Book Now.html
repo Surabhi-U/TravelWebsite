@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bnstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+   </head>
+<body>
+  
+  <div class="container">
+    <div class="title">Pleasant Holidays - Let's Book the Tour!</div>
+    <div class="content">
+      <form action="https://formcarry.com/s/zbAsmkzYF8K" method="POST" id="my-form" onsubmit="clickme()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="Name" placeholder="Enter your full name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email-id</span>
+            <input type="email" name="Email" placeholder="Enter your email id" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" id="phone" name="Phone no" placeholder="Enter your phone number" pattern="+91-[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
+            <small>Format: +91-0000-000-000</small><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Tour Preference</span>
+            <select name="Tour Preference" id="slt1" onchange="populate(this.id,'slt2')">
+              <option value="">Choose Your Preference</option>
+              <option value="staycation">Stay Cation</option>
+              <option value="trekking">Trekking</option>
+              <option value="tranquility">Tranquility</option>
+              <option value="historical places">Historical Places</option>
+              <option value="beaches">Beaches</option>
+              <option value="wildlife">Wildlife</option>
+            </select>
+            <span class="arrow"></span>
+          </div>
+          <div class="input-box">
+            <span class="details">Place Preference</span>
+            <select name="Place Preference" id="slt2"></select>
+          </div>
+          <div class="input-box">
+            <span class="details">Date</span>
+            <input type="date" name="Date" placeholder="dd/mm/yyyy" required>
+          </div>
+          <div class="input-box">
+            <span class="details">No. of Days</span>
+            <input type="number" name="Days" placeholder="Enter the no. of days" required min="1" oninput="validity.valid||(value='');">
+          </div>
+          <div class="input-box">
+            <span class="details">No. of people</span>
+            <input type="number" name="People" placeholder="Enter the no. of people" required min="1" oninput="validity.valid||(value='');">
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Book Now">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="booknow.js"></script>
+  <script src="review.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
